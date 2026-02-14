@@ -1,47 +1,51 @@
-# 🌐 Django Blog Security Project
+# 🚧 Django Security Blog Project – Under Development 🔐
 
+![Status](https://img.shields.io/badge/Status-Under_Development-orange?style=for-the-badge)
+![Security Focus](https://img.shields.io/badge/Focus-Security-red?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+---
+
+## ⚠️ Project Status
+
+> This project is **actively under development**.  
+> The primary goal is to **build the most secure web application possible**.  
+> All features, structures, and future improvements will focus on **maximum security**.
 
 ---
 
 ## 🖥️ About This Project
 
-This is a **test Django Blog project** built with Python and Django.  
-The project is designed as a **learning platform** to:
-
-- Develop a fully functional **blog application**
-- Implement **secure coding practices**
-- Experiment with **advanced security techniques**
-- Share **practical security solutions** for Django projects
-
-> The main goal is not only to create a blog but also to **turn it into a secure example project** for educational purposes.
+- This is a **Django Blog project** in its initial stage.  
+- Currently being developed for **learning, experimentation, and security testing**.  
+- Future goal: **a fully secure, reference web application** demonstrating advanced security practices.  
 
 ---
 
-## 🚀 Current Features
+## 🚀 Current Development
 
-- ✅ Django project setup complete  
-- ✅ Blog app structure created  
-- ✅ URL routing configured  
-- ✅ Templates organized with main `index.html`  
-- ⚠️ Initial project phase – blog content and functionality are under development
+- Django project initialized  
+- Blog app structure created  
+- URL routing configured  
+- Templates prepared  
+- Static files configured  
+
+> ⚠️ This is **just the beginning**. Development is ongoing.
 
 ---
 
 ## 🔐 Future Security Goals
 
-Once the blog is fully developed, the project will focus on **enhancing security**:
+Once fully developed, the project will focus on:
 
-- Secure authentication & authorization  
+- Advanced authentication & authorization  
 - CSRF, XSS, SQL injection prevention  
-- Form validation & data sanitization  
+- Input validation & data sanitization  
 - Logging, monitoring, and threat detection  
-- Scripts and tools to demonstrate security improvements
+- Security scripts and demonstration of secure practices
 
-All security practices will be **documented** and linked to future repositories for learning purposes.
+> Every security implementation will be **documented** and may be linked to future repositories as examples.
 
 ---
 
@@ -50,26 +54,15 @@ All security practices will be **documented** and linked to future repositories 
 
 ---
 
-## 💡 Technologies Used
+## 📌 Notes
 
-- Python 🐍  
-- Django 🌿  
-- HTML5 🟧  
-- CSS3 🟦  
-
----
-
-## 📝 Notes
-
-This repository is a **work in progress**.  
-The ultimate goal is to **transform it into a secure Django Blog project**, showcasing best practices in web application security.
+- **Project under active development** – not complete yet  
+- **Primary focus: Security** from backend to frontend  
+- Updates will include **security improvements and new features**  
 
 ---
 
-## 🌟 Connect & Learn
+## 🌟 Follow & Learn
 
-Follow this project to see **step-by-step development** and **security enhancements** over time.  
-Every update will bring **new features, templates, and security scripts**.
-
----
-
+> Stay updated to see **step-by-step development** and **security enhancements** over time.  
+> From a simple blog to **the most secure Django web application**, watch the project evolve!
