@@ -1,10 +1,12 @@
-# Ignore frontend template and static files for language stats
-templates/** linguist-vendored
-static/** linguist-vendored
+# Ignore frontend files for language stats
 assets/** linguist-vendored
+
+# Ignore Django migrations
+*/migrations/** linguist-vendored
 
 # Make sure Python files are counted as Python
 *.py linguist-language=Python
 
-# Optional: ignore migrations if you want
-*/migrations/** linguist-vendored
+# Optional: ignore other files not relevant
+*.html linguist-vendored
+*.css linguist-vendored
