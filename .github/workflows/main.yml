@@ -1,0 +1,31 @@
+name: Daily Commit
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # هر روز ساعت 12:00 UTC
+  workflow_dispatch:
+
+jobs:
+  daily-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update progress file
+        run: |
+          echo "Update on $(date)" >> DAILY_PROGRESS.md
+
+      - name: Commit changes
+        run: |
+          git add DAILY_PROGRESS.md
+          git commit -m "Daily automatic commit $(date)" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push
