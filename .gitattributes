@@ -1,14 +1,7 @@
-# ignore django admin
-**/static/admin/** linguist-vendored
+# Force Linguist to ignore frontend JS and CSS files for language stats
+assets/** linguist-vendored
+static/** linguist-vendored
+templates/** linguist-vendored
 
-# ignore migrations
-**/migrations/** linguist-generated
-
-# ignore virtual env
-.venv/** linguist-vendored
-
-# ignore collected static
-staticfiles/** linguist-vendored
-
-# ignore templates
-templates/** linguist-documentation
+# Force Django/Python to be counted
+*.py linguist-language=Python
