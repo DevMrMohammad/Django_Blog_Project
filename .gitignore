@@ -1,0 +1,21 @@
+# virtual env
+.venv/
+
+# python
+__pycache__/
+*.pyc
+
+# database
+db.sqlite3
+
+# vscode
+.vscode/
+
+# migrations cache
+*.log
+
+# env
+.env
+
+# static collected
+staticfiles/
