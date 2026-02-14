@@ -1,9 +1,14 @@
-# Django admin static files
-**/static/admin/* linguist-vendored
-**/migrations/* linguist-generated
+# ignore django admin
+**/static/admin/** linguist-vendored
+
+# ignore migrations
+**/migrations/** linguist-generated
+
+# ignore virtual env
+.venv/** linguist-vendored
 
 # ignore collected static
-staticfiles/* linguist-vendored
+staticfiles/** linguist-vendored
 
-# templates shouldn't dominate language stats
-templates/* linguist-detectable=false
+# ignore templates
+templates/** linguist-documentation
