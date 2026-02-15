@@ -17,6 +17,9 @@ def user_login(request):
     return render(request, "accounts/Login.html", {})
 
 
+def user_register(request):
+    return render(request, "accounts/Register.html", {})
+
 def user_logout(request):
     logout(request)
     return redirect('/')
