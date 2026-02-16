@@ -1,6 +1,21 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+# object for author articles ---------------------------.----------------------.
+
+# cascade
+
+# set null
+
+# protect
+
+# set default
+
+# ------------------------------------------------------.----------------------.
+
+
+
 class Article(models.Model):
     author = models.ForeignKey(User, on_delete =models.CASCADE, )
     # user and CADCADE = if delete user : all data for in user deleted 
