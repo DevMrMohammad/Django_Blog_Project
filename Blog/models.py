@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Article(models.Model):
-    auther = models.ForeignKey(User, on_delete =models.CASCADE, )
+    author = models.ForeignKey(User, on_delete =models.CASCADE, )
     # user and CADCADE = if delete user : all data for in user deleted 
     title = models.CharField(max_length=70)
     body = models.TextField()
