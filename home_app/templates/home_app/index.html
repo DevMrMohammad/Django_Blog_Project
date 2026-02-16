@@ -80,12 +80,12 @@ https://templatemo.com/tm-551-stand-blog
                           href="">{{ request.user.username }}</a>
                        {% endif %}
 
-                    <a href="/logout"><span class="badge badge-danger mt-2">logout</span></a>
+                    <a href="{% url 'accounts:logout' %}"><span class="badge badge-danger mt-2">logout</span></a>
                   </div>
                 {% else %}
                 <div class="d-flex">
-                  <a class="nav-link" href="/login">Login</a><span class="mt-2">/</span>
-                  <a class="nav-link" href="/register">Register</a>
+                  <a class="nav-link" href="{% url 'accounts:login' %}">Login</a><span class="mt-2">/</span>
+                  <a class="nav-link" href="{% url 'accounts:register' %}">Register</a>
                 </div>
                 {% endif %}
               </li>
