@@ -31,6 +31,9 @@ class Article(models.Model):
     CHOICES = (
         ('a', 'python'),
         ('b', 'django'),
+        ('c', 'animals'),
+        ('d', 'laptop'),
+
     )
     author = models.ForeignKey(User, on_delete =models.CASCADE)
     category = models.ManyToManyField(Category)
