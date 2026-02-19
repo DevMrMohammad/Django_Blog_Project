@@ -17,10 +17,16 @@ from django.contrib.auth.models import User
 
 
 class Article(models.Model):
+
+    CHOICES = (
+        ('a', 'python'),
+        ('b', 'django'),
+    )
     author = models.ForeignKey(User, on_delete =models.CASCADE)
     # help_text = enter a text for help write at more fild 
     # UNIQE = because not replay title or mode data 
-    title = models.CharField(max_length=70, help_text="ENTER A VALID TITLE")
+    # CHOICES = because select betwin two option for fild
+    title = models.CharField(max_length=70, help_text="ENTER A VALID TITLE", choices=CHOICES)
     body = models.TextField()
     image = models.ImageField(upload_to="images/articles")
     created = models.DateField(auto_now_add=True)
