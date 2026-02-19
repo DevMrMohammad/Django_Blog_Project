@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.utils import timezone
 
 # object for author articles ---------------------------.----------------------.
 
@@ -31,6 +31,8 @@ class Article(models.Model):
     image = models.ImageField(upload_to="images/articles")
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
+    # add timezone for view time write 
+    pub_date = models.DateField(default=timezone.now())
 
 
 
