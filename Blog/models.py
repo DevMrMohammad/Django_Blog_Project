@@ -11,6 +11,10 @@ from django.utils import timezone
 # protect
 
 # set default
+# ithem for database = 
+    # help_text = enter a text for help write at more fild 
+    # UNIQE = because not replay title or mode data 
+    # CHOICES = because select betwin two option for fild
 
 # ------------------------------------------------------.----------------------.
 
@@ -27,20 +31,15 @@ class Category(models.Model):
 
 
 class Article(models.Model):
-
-    CHOICES = (
-        ('a', 'python'),
-        ('b', 'django'),
-        ('c', 'animals'),
-        ('d', 'laptop'),
-
-    )
+    # CHOICES = (
+    #     ('a', 'python'),
+    #     ('b', 'django'),
+    #     ('c', 'animals'),
+    #     ('d', 'laptop'),
+    # )
     author = models.ForeignKey(User, on_delete =models.CASCADE)
     category = models.ManyToManyField(Category)
-    # help_text = enter a text for help write at more fild 
-    # UNIQE = because not replay title or mode data 
-    # CHOICES = because select betwin two option for fild
-    title = models.CharField(max_length=70, help_text="ENTER A VALID TITLE", choices=CHOICES)
+    title = models.CharField(max_length=70)
     body = models.TextField()
     image = models.ImageField(upload_to="images/articles")
     created = models.DateField(auto_now_add=True)
