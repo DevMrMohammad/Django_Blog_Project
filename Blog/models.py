@@ -19,7 +19,7 @@ from django.contrib.auth.models import User
 class Article(models.Model):
     author = models.ForeignKey(User, on_delete =models.CASCADE)
     # help_text = enter a text for help write at more fild 
-    title = models.CharField(max_length=70, help_text="ENTER A VALID TITLE ")
+    title = models.CharField(max_length=70, help_text="ENTER A VALID TITLE")
     body = models.TextField()
     image = models.ImageField(upload_to="images/articles")
     created = models.DateField(auto_now_add=True)
