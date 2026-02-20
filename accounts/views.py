@@ -14,29 +14,41 @@ def user_login(request):
         if user is not None:
             login(request, user)
             return redirect('home_app:main')
-            
+        
     return render(request, "accounts/Login.html", {})
 
 
 def user_register(request):
     context = {"errors": []}
+
     if request.user.is_authenticated:
-           return redirect('home_app:main')
-    
+        return redirect('home_app:main')
 
     if request.method == "POST":
         username = request.POST.get('username')
         email = request.POST.get('email')
         password1 = request.POST.get('password1')
         password2 = request.POST.get('password2')
+
         if password1 != password2:
-            context['errors'].append('passwords are not same')
+            context['errors'].append('Passwords are not the same')
+
+        if User.objects.filter(username=username).exists():
+            context['errors'].append('Username already exists')
+
+        if context['errors']:
             return render(request, "accounts/Register.html", context)
-        user = User.objects.create_user(username=username, password=password1, email=email)
+
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=password1
+        )
+
         login(request, user)
         return redirect('home_app:main')
 
-    return render(request, "accounts/Register.html", {})
+    return render(request, "accounts/Register.html", context)
 
 def user_logout(request):
     logout(request)

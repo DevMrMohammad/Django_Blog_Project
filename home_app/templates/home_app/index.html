@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}" />
     <link rel="stylesheet" href="{% static 'css/templatemo-stand-blog.css' %}" />
     <link rel="stylesheet" href="{% static 'css/owl.css' %}" />
-    <!--         
+    <!--                                     
 
 TemplateMo 551 Stand Blog
 
 https://templatemo.com/tm-551-stand-blog
 
-         -->
+                                     -->
   </head>
 
   <body>
@@ -67,18 +67,17 @@ https://templatemo.com/tm-551-stand-blog
               <li class="nav-item">
                 {% if request.user.is_authenticated %}
                   <div class="d-flex align-items-center">
-                    {% if request.user.first_name %}
-                      {% if user.profile.image %}
+                    {% if request.user.profile %}
+                      {% if request.user.profile.image %}
                         <img src="{{ user.profile.image.url }}" alt="Profile" style="width:40px; height:40px; border-radius:50%; object-fit:cover; margin-right:10px;" />
                       {% else %}
-                        <img src="{% static 'images/icons.image2.png' %}" alt="" style="width:40px; height:40px; border-radius:50%; object-fit:cover; margin-right:10px;" />
+                        <img src="{% static 'images/icons/image2.png' %}" alt="Profile" style="width:40px; height:40px; border-radius:50%; object-fit:cover; margin-right:10px;" />
                       {% endif %}
 
-                      <span class="me-3">{{ request.user.first_name }} {{ request.user.last_name }}</span>
+                      <span class="me-3">{{ request.user.first_name|default:request.user.username }} {{ request.user.last_name }}</span>
                     {% else %}
                       <span class="me-3">{{ request.user.username }}</span>
                     {% endif %}
-
                     <a href="{% url 'accounts:logout' %}" style="margin-left:15px;"><span class="badge badge-danger mt-2">logout</span></a>
                   </div>
                 {% else %}
