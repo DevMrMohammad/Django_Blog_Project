@@ -22,7 +22,7 @@
                 <div class="meta-category">
                   <span>{{ article.category.all.0 }}</span>
                 </div>
-                <a href="{% url 'blog:article_detail' article.id %}"><h4>{{ article.title }}</h4></a>
+                <a href="{% url 'blog:article_detail' article.title  %}"><h4>{{ article.title }}</h4></a>
                 <ul class="post-info">
                   <li>
                     <a href="#">{{ article.author.username }}</a>
